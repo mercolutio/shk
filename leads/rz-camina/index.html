@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1d211e">
+<title>R&amp;Z Innovative Haustechnik GmbH – Sanitär · Heizung · Klima in Radibor</title>
+<meta name="description" content="R&amp;Z Innovative Haustechnik GmbH aus Radibor (Camina): Ihr Meisterbetrieb für Bad &amp; Sanitär, Heizung &amp; Wärmepumpe, Klima- und Lüftungstechnik sowie intelligente Gebäudesteuerung. Jetzt anrufen und Termin sichern.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="R&amp;Z Innovative Haustechnik GmbH – Sanitär · Heizung · Klima in Radibor">
+<meta property="og:description" content="Meisterbetrieb für Bad, Heizung, Klima &amp; Gebäudetechnik in Radibor / Camina.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f5f2ec;
+    --bg-soft:#efe9df;
+    --card:#fbf9f4;
+    --ink:#1d211e;
+    --ink-soft:#4a514c;
+    --line:#dcd5c8;
+    --accent:#1f4d3f;        /* tiefes Grün */
+    --accent-dark:#163a30;
+    --accent-soft:#e7efe9;
+    --max:1140px;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Manrope",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+  section{padding:84px 0}
+  h1,h2,h3{line-height:1.18;letter-spacing:-0.02em;font-weight:800}
+  h2{font-size:clamp(1.7rem,3.4vw,2.5rem)}
+  .eyebrow{
+    display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--accent);margin-bottom:14px;
+  }
+  .lead{color:var(--ink-soft);font-size:1.05rem;max-width:60ch}
+
+  /* Buttons */
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    padding:13px 22px;border-radius:10px;font-weight:700;font-size:.96rem;
+    border:1.5px solid transparent;transition:.18s ease;cursor:pointer;
+  }
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-primary:hover{background:var(--accent-dark)}
+  .btn-ghost{background:transparent;border-color:var(--line);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+  /* Header */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(245,242,236,.88);
+    backdrop-filter:saturate(140%) blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:1.06rem;letter-spacing:-.02em}
+  .mark{
+    width:36px;height:36px;border-radius:9px;background:var(--accent);
+    color:#fff;display:grid;place-items:center;font-weight:800;font-size:.92rem;
+  }
+  .brand small{display:block;font-weight:500;font-size:.66rem;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--ink-soft)}
+  .nav-links{display:flex;align-items:center;gap:30px}
+  .nav-links a{font-weight:600;font-size:.95rem;color:var(--ink-soft);transition:.15s}
+  .nav-links a:hover{color:var(--accent)}
+  .nav-cta{display:flex;align-items:center;gap:14px}
+  .tel-btn{
+    display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;
+    padding:10px 18px;border-radius:9px;font-weight:700;font-size:.92rem;
+  }
+  .tel-btn:hover{background:var(--accent-dark)}
+  .burger{display:none;background:none;border:0;cursor:pointer;padding:8px;width:42px;height:42px}
+  .burger span{display:block;width:23px;height:2px;background:var(--ink);margin:5px auto;transition:.25s}
+  .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  /* Hero */
+  .hero{
+    padding:96px 0 88px;
+    background:
+      radial-gradient(900px 420px at 88% -10%, var(--accent-soft) 0%, transparent 60%),
+      var(--bg);
+    border-bottom:1px solid var(--line);
+  }
+  .hero h1{font-size:clamp(2.1rem,5.2vw,3.5rem);max-width:16ch}
+  .hero .lead{margin:22px 0 30px;font-size:1.12rem}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:26px;margin-top:40px;
+    padding-top:28px;border-top:1px solid var(--line)}
+  .hero-meta div{min-width:120px}
+  .hero-meta strong{display:block;font-size:1.45rem;color:var(--accent)}
+  .hero-meta span{font-size:.86rem;color:var(--ink-soft)}
+
+  /* Services */
+  .grid{display:grid;gap:20px}
+  .services-grid{grid-template-columns:repeat(3,1fr)}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:30px 26px;transition:.2s ease;
+  }
+  .card:hover{border-color:var(--accent);transform:translateY(-3px)}
+  .ico{
+    width:46px;height:46px;border-radius:11px;background:var(--accent-soft);
+    color:var(--accent);display:grid;place-items:center;margin-bottom:18px;
+  }
+  .ico svg{width:24px;height:24px}
+  .card h3{font-size:1.18rem;margin-bottom:9px}
+  .card p{color:var(--ink-soft);font-size:.96rem}
+
+  /* About */
+  .about{background:var(--bg-soft);border-block:1px solid var(--line)}
+  .about-grid{grid-template-columns:1fr 1fr;gap:54px;align-items:start}
+  .trust{display:grid;gap:16px;margin-top:10px}
+  .trust li{display:flex;gap:14px;align-items:flex-start;list-style:none}
+  .trust .dot{flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:var(--accent);
+    color:#fff;display:grid;place-items:center;font-size:.8rem;font-weight:800;margin-top:3px}
+  .trust strong{display:block}
+  .trust span{color:var(--ink-soft);font-size:.95rem}
+
+  /* Contact */
+  .contact-grid{grid-template-columns:1fr 1fr;gap:46px;align-items:start}
+  .contact-list{display:grid;gap:22px;margin-top:8px}
+  .contact-row{display:flex;gap:15px;align-items:flex-start}
+  .contact-row .ico{margin:0;flex:0 0 auto}
+  .contact-row a{font-weight:700;font-size:1.06rem}
+  .contact-row span{display:block;color:var(--ink-soft);font-size:.85rem;font-weight:500}
+  .hours{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+  .hours h3{font-size:1.1rem;margin-bottom:16px}
+  .hours table{width:100%;border-collapse:collapse}
+  .hours td{padding:9px 0;border-bottom:1px solid var(--line);font-size:.96rem}
+  .hours td:last-child{text-align:right;font-weight:700;color:var(--accent)}
+  .hours tr:last-child td{border-bottom:0}
+
+  /* Footer + legal */
+  footer{background:var(--ink);color:#cfd4cf;padding:56px 0 30px}
+  .foot-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:30px;
+    padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .foot-top .brand{color:#fff}
+  .foot-top .mark{background:#fff;color:var(--accent)}
+  .foot-links{display:flex;flex-wrap:wrap;gap:24px;font-size:.93rem}
+  .foot-links a:hover{color:#fff}
+  .foot-bottom{padding-top:22px;font-size:.84rem;color:#9aa39c;
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+
+  .legal{background:var(--bg-soft);border-top:1px solid var(--line)}
+  .legal h2{font-size:1.6rem;margin-bottom:8px}
+  .legal h3{font-size:1.05rem;margin:24px 0 6px}
+  .legal p{color:var(--ink-soft);max-width:75ch;font-size:.97rem;margin-bottom:6px}
+  .legal .block{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:30px 28px;margin-top:18px}
+  .note{font-size:.85rem;color:#8a6d2f;background:#fbf3df;border:1px solid #ecdcb4;
+    border-radius:9px;padding:10px 14px;display:inline-block;margin-top:14px}
+
+  @media(max-width:880px){
+    .services-grid{grid-template-columns:repeat(2,1fr)}
+    .about-grid,.contact-grid{grid-template-columns:1fr;gap:34px}
+  }
+  @media(max-width:720px){
+    section{padding:62px 0}
+    .nav-links{
+      position:absolute;top:70px;left:0;right:0;background:var(--bg);
+      flex-direction:column;align-items:flex-start;gap:0;
+      border-bottom:1px solid var(--line);padding:8px 22px 18px;
+      display:none;box-shadow:0 18px 30px -22px rgba(0,0,0,.3)}
+    .nav-links.open{display:flex}
+    .nav-links a{width:100%;padding:13px 0;border-bottom:1px solid var(--line)}
+    .nav .tel-btn{display:none}
+    .burger{display:block}
+    .services-grid{grid-template-columns:1fr}
+    .hero-meta div{min-width:46%}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Startseite">
+      <span class="mark">R&amp;Z</span>
+      <span>R&amp;Z Haustechnik<small>Innovative Haustechnik GmbH</small></span>
+    </a>
+    <nav class="nav-links" id="menu">
+      <a href="#leistungen">Leistungen</a>
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="tel-btn" href="tel:+49359346220" style="display:inline-flex">035934 6220</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="tel-btn" href="tel:+49359346220">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.94.36 1.86.7 2.74a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.34-1.27a2 2 0 0 1 2.11-.45c.88.34 1.8.57 2.74.7A2 2 0 0 1 22 16.92z"/></svg>
+        Anrufen
+      </a>
+      <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Meisterbetrieb in Radibor · Camina</span>
+      <h1>Sanitär, Heizung &amp; Klima – aus einer Hand in Radibor.</h1>
+      <p class="lead">Die R&amp;Z Innovative Haustechnik GmbH plant, installiert und wartet
+        Bäder, Heizungen, Wärmepumpen und Lüftungstechnik – zuverlässig für Privat- und
+        Gewerbekunden in der Region Bautzen / Oberlausitz.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="tel:+49359346220">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.94.36 1.86.7 2.74a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.34-1.27a2 2 0 0 1 2.11-.45c.88.34 1.8.57 2.74.7A2 2 0 0 1 22 16.92z"/></svg>
+          035934 6220
+        </a>
+        <a class="btn btn-ghost" href="#kontakt">Angebot anfragen</a>
+      </div>
+      <div class="hero-meta">
+        <div><strong>Meister&shy;betrieb</strong><span>SHK aus einer Hand</span></div>
+        <div><strong>Regional</strong><span>Radibor &amp; Oberlausitz</span></div>
+        <div><strong>Privat &amp; Gewerbe</strong><span>für jedes Projekt</span></div>
+        <div><strong>Beratung</strong><span>persönlich vor Ort</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEISTUNGEN -->
+  <section id="leistungen">
+    <div class="wrap">
+      <span class="eyebrow">Leistungen</span>
+      <h2>Was wir für Sie umsetzen</h2>
+      <p class="lead" style="margin:14px 0 36px">Von der modernen Badsanierung bis zur
+        zukunftssicheren Heizung – wir begleiten Ihr Projekt von der Planung bis zur Wartung.</p>
+      <div class="grid services-grid">
+
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16V4a2 2 0 0 1 2-2 2 2 0 0 1 2 2v12"/><path d="M11 6h6a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H7"/><path d="M5 16h14a1 1 0 0 1 1 1 4 4 0 0 1-4 4H8a4 4 0 0 1-4-4 1 1 0 0 1 1-1z"/></svg></div>
+          <h3>Bad &amp; Sanitär</h3>
+          <p>Badmodernisierung, barrierefreie Bäder und sichere Trinkwasser&shy;installationen –
+            geplant auf Wunsch im 3D-Badplaner.</p>
+        </div>
+
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6"/><path d="M12 22a7 7 0 0 0 7-7c0-3-2-5-3.5-7.5C14 5 12 2 12 2s-2 3-3.5 5.5C7 10 5 12 5 15a7 7 0 0 0 7 7z"/></svg></div>
+          <h3>Heizung &amp; Wärmepumpe</h3>
+          <p>Regenerative Heizsysteme, Öl- und Gasheizungen, Wärmeverteilung sowie BHKW –
+            effizient und förderfähig.</p>
+        </div>
+
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2"/><path d="M17.73 7.27A2.5 2.5 0 1 1 19.5 11.5H2"/><path d="M9.79 17.41A2 2 0 1 0 11 14H2"/></svg></div>
+          <h3>Klima &amp; Lüftung</h3>
+          <p>Klimatechnik und kontrollierte Lüftung für ein gesundes Raumklima – im Wohn- wie
+            im Gewerbebereich.</p>
+        </div>
+
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></div>
+          <h3>Intelligente Gebäudesteuerung</h3>
+          <p>Smart-Home-Lösungen, die Heizung, Klima und Verbrauch komfortabel und
+            energiesparend miteinander vernetzen.</p>
+        </div>
+
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><path d="M9 9v.01M9 12v.01M9 15v.01"/></svg></div>
+          <h3>Gewerbe &amp; Industrie</h3>
+          <p>Maßgeschneiderte Haustechnik für Gewerbekunden – von der Planung bis zur
+            laufenden Betreuung größerer Objekte.</p>
+        </div>
+
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+          <h3>Wartung &amp; Service</h3>
+          <p>Regelmäßige Wartung und schneller Service halten Ihre Anlagen langlebig,
+            sicher und effizient im Betrieb.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ÜBER UNS -->
+  <section id="ueber-uns" class="about">
+    <div class="wrap grid about-grid">
+      <div>
+        <span class="eyebrow">Über uns</span>
+        <h2>Warum Kunden auf R&amp;Z setzen</h2>
+        <p class="lead" style="margin-top:16px">Als innovativer Haustechnik-Betrieb in
+          Radibor verbinden wir solides Handwerk mit moderner Technik. Wir hören zu, planen
+          sauber und liefern Lösungen, die jahrelang funktionieren – für Ihr Zuhause und
+          Ihren Betrieb.</p>
+      </div>
+      <ul class="trust">
+        <li><span class="dot">✓</span><div><strong>Alles aus einer Hand</strong><span>Sanitär, Heizung, Klima und Gebäudesteuerung – ein Ansprechpartner für Ihr gesamtes Projekt.</span></div></li>
+        <li><span class="dot">✓</span><div><strong>Innovative Technik</strong><span>Wärmepumpen, Photovoltaik, BHKW und Smart Home – zukunftssicher und förderfähig geplant.</span></div></li>
+        <li><span class="dot">✓</span><div><strong>Regional verwurzelt</strong><span>Fest in Radibor und der Oberlausitz – kurze Wege, persönliche Beratung, schnelle Termine.</span></div></li>
+        <li><span class="dot">✓</span><div><strong>Privat &amp; Gewerbe</strong><span>Vom Familienbad bis zur Gewerbeanlage – wir betreuen Projekte jeder Größe zuverlässig.</span></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt">
+    <div class="wrap grid contact-grid">
+      <div>
+        <span class="eyebrow">Kontakt</span>
+        <h2>Sprechen Sie uns an</h2>
+        <p class="lead" style="margin:14px 0 8px">Rufen Sie uns an oder schreiben Sie uns –
+          wir melden uns zeitnah zurück und beraten Sie gern zu Ihrem Vorhaben.</p>
+        <div class="contact-list">
+          <div class="contact-row">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.94.36 1.86.7 2.74a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.34-1.27a2 2 0 0 1 2.11-.45c.88.34 1.8.57 2.74.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div><span>Telefon</span><a href="tel:+49359346220">035934 6220</a></div>
+          </div>
+          <div class="contact-row">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></div>
+            <div><span>E-Mail</span><a href="mailto:mail@rz-camina.de">mail@rz-camina.de</a></div>
+          </div>
+          <div class="contact-row">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><span>Adresse</span><a href="https://maps.google.com/?q=Camina+16a,+02627+Radibor" target="_blank" rel="noopener">Camina 16a, 02627 Radibor</a></div>
+          </div>
+          <div class="contact-row">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg></div>
+            <div><span>Telefax</span><a href="#">035934 62216</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hours">
+        <h3>Öffnungszeiten</h3>
+        <table>
+          <tr><td>Montag</td><td>7:00 – 17:00</td></tr>
+          <tr><td>Dienstag</td><td>7:00 – 17:00</td></tr>
+          <tr><td>Mittwoch</td><td>7:00 – 17:00</td></tr>
+          <tr><td>Donnerstag</td><td>7:00 – 17:00</td></tr>
+          <tr><td>Freitag</td><td>7:00 – 16:00</td></tr>
+          <tr><td>Samstag &amp; Sonntag</td><td>geschlossen</td></tr>
+        </table>
+        <a class="btn btn-primary" href="tel:+49359346220" style="margin-top:22px;width:100%;justify-content:center">Jetzt anrufen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPRESSUM -->
+  <section id="impressum" class="legal">
+    <div class="wrap">
+      <span class="eyebrow">Rechtliches</span>
+      <h2>Impressum</h2>
+      <p>Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz).</p>
+      <div class="block">
+        <h3>Anbieter</h3>
+        <p><strong>R&amp;Z Innovative Haustechnik GmbH</strong><br>
+          Camina 16a<br>02627 Radibor<br>Deutschland</p>
+
+        <h3>Kontakt</h3>
+        <p>Telefon: 035934 6220<br>Telefax: 035934 62216<br>
+          E-Mail: <a href="mailto:mail@rz-camina.de">mail@rz-camina.de</a></p>
+
+        <h3>Vertretungsberechtigte Geschäftsführer</h3>
+        <p>Thomas Henke, Kristina Retschke, Tony Mitschke, Martin Bohot</p>
+
+        <h3>Registereintrag</h3>
+        <p>Eintragung im Handelsregister<br>
+          Registergericht: Amtsgericht Dresden<br>
+          Registernummer: HRB 5420</p>
+
+        <h3>Umsatzsteuer-Identifikationsnummer</h3>
+        <p>USt-IdNr. gemäß § 27 a Umsatzsteuergesetz: DE140364676</p>
+
+        <h3>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h3>
+        <p>R&amp;Z Innovative Haustechnik GmbH, Camina 16a, 02627 Radibor</p>
+
+        <h3>Berufshaftpflicht / zuständige Kammer</h3>
+        <p>Zuständige Handwerkskammer und Angaben zur Berufshaftpflicht&shy;versicherung: <em>[bitte ergänzen]</em></p>
+
+        <h3>Haftung für Inhalte &amp; Links</h3>
+        <p>Als Diensteanbieter sind wir für eigene Inhalte auf diesen Seiten nach den
+          allgemeinen Gesetzen verantwortlich. Für Inhalte externer Links sind ausschließlich
+          deren Betreiber verantwortlich; zum Zeitpunkt der Verlinkung waren keine
+          Rechtsverstöße erkennbar.</p>
+        <span class="note">Demo-Vorschau · rechtliche Angaben vor Veröffentlichung anwaltlich prüfen lassen.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- DATENSCHUTZ -->
+  <section id="datenschutz" class="legal" style="border-top:0;padding-top:0">
+    <div class="wrap">
+      <h2 style="margin-top:0">Datenschutzerklärung</h2>
+      <div class="block">
+        <h3>1. Verantwortlicher</h3>
+        <p>Verantwortlich für die Datenverarbeitung auf dieser Website ist:<br>
+          R&amp;Z Innovative Haustechnik GmbH, Camina 16a, 02627 Radibor,
+          E-Mail: <a href="mailto:mail@rz-camina.de">mail@rz-camina.de</a>, Telefon: 035934 6220.</p>
+
+        <h3>2. Erhebung und Verarbeitung personenbezogener Daten</h3>
+        <p>Beim Besuch dieser Website werden durch den Server automatisch Informationen
+          (z. B. IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seite) in sog.
+          Server-Logfiles erfasst. Diese Verarbeitung erfolgt zur Gewährleistung eines
+          störungsfreien Betriebs auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.</p>
+
+        <h3>3. Kontaktaufnahme</h3>
+        <p>Wenn Sie uns per Telefon oder E-Mail kontaktieren, werden Ihre Angaben zur
+          Bearbeitung der Anfrage und für mögliche Anschlussfragen gespeichert. Rechtsgrundlage
+          ist Art. 6 Abs. 1 lit. b bzw. lit. f DSGVO.</p>
+
+        <h3>4. Speicherdauer</h3>
+        <p>Wir verarbeiten Ihre Daten nur so lange, wie es für die genannten Zwecke
+          erforderlich ist oder gesetzliche Aufbewahrungsfristen dies vorsehen.</p>
+
+        <h3>5. Ihre Rechte</h3>
+        <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der
+          Verarbeitung, Datenübertragbarkeit sowie Widerspruch. Zudem steht Ihnen ein
+          Beschwerderecht bei einer Datenschutz-Aufsichtsbehörde zu (in Sachsen: Sächsischer
+          Datenschutz&shy;beauftragter).</p>
+
+        <h3>6. Kontakt in Datenschutzfragen</h3>
+        <p>Für Fragen zum Datenschutz wenden Sie sich bitte an:
+          <a href="mailto:mail@rz-camina.de">mail@rz-camina.de</a>.</p>
+        <span class="note">Demo-Vorschau · Datenschutztext vor Veröffentlichung an die tatsächlich eingesetzten Dienste anpassen und prüfen lassen.</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <a class="brand" href="#top">
+        <span class="mark">R&amp;Z</span>
+        <span style="color:#fff">R&amp;Z Haustechnik<small style="color:#9aa39c">Innovative Haustechnik GmbH</small></span>
+      </a>
+      <nav class="foot-links">
+        <a href="#leistungen">Leistungen</a>
+        <a href="#ueber-uns">Über uns</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="#impressum">Impressum</a>
+        <a href="#datenschutz">Datenschutz</a>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> R&amp;Z Innovative Haustechnik GmbH · Camina 16a, 02627 Radibor</span>
+      <span>Telefon 035934 6220 · mail@rz-camina.de</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Hamburger-Menü
+  var burger = document.getElementById('burger');
+  var menu = document.getElementById('menu');
+  burger.addEventListener('click', function(){
+    var open = menu.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  // Menü schließen bei Klick auf einen Link
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      menu.classList.remove('open');
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded','false');
+    });
+  });
+  // Jahr im Footer
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

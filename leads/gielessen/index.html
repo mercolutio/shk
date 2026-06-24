@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gieleßen Handwerk &amp; Service – Sanitär · Heizung · Klima in Mönchengladbach</title>
+  <meta name="description" content="Gieleßen Handwerk &amp; Service in Mönchengladbach: Haustechnik, Sanitär &amp; Heizung, Renovierung, Montageservice, Rohrbruch-Sanierung und Trocknungsservice. Schnelle Termine, faire Beratung.">
+  <meta name="theme-color" content="#1f3a4d">
+  <meta name="robots" content="index,follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f5f2ec;
+      --bg-2:#efeae1;
+      --ink:#1d211e;
+      --ink-soft:#4a514c;
+      --accent:#1f3a4d;
+      --accent-2:#2c5871;
+      --line:#e0d9cc;
+      --card:#fbf9f5;
+      --radius:14px;
+      --maxw:1120px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:'Manrope',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:var(--bg);
+      color:var(--ink);
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+    section{padding:88px 0}
+    h1,h2,h3{line-height:1.15;letter-spacing:-0.02em;font-weight:800}
+    h2{font-size:clamp(1.7rem,3.4vw,2.5rem)}
+    .eyebrow{
+      font-size:.8rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+      color:var(--accent);margin-bottom:14px;display:inline-block;
+    }
+    .lead{color:var(--ink-soft);font-size:1.08rem;max-width:62ch}
+
+    /* Header */
+    header{
+      position:sticky;top:0;z-index:50;
+      background:rgba(245,242,236,.88);
+      backdrop-filter:saturate(140%) blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:1.12rem;letter-spacing:-0.01em}
+    .brand .mark{
+      width:38px;height:38px;border-radius:9px;background:var(--accent);
+      color:#fff;display:grid;place-items:center;font-weight:800;font-size:1rem;flex:none;
+    }
+    .nav-links{display:flex;align-items:center;gap:30px}
+    .nav-links a{font-weight:600;color:var(--ink-soft);font-size:.97rem;transition:color .15s}
+    .nav-links a:hover{color:var(--ink)}
+    .btn{
+      display:inline-flex;align-items:center;gap:8px;
+      font-weight:700;font-size:.95rem;border-radius:10px;padding:12px 20px;
+      border:1px solid transparent;cursor:pointer;transition:.18s;white-space:nowrap;
+    }
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-primary:hover{background:var(--accent-2)}
+    .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+    .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+    .nav .btn{padding:10px 18px}
+    .hamburger{display:none;background:none;border:0;cursor:pointer;width:44px;height:44px;flex-direction:column;justify-content:center;gap:5px}
+    .hamburger span{display:block;height:2px;width:24px;background:var(--ink);border-radius:2px;transition:.25s}
+    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+    /* Hero */
+    .hero{
+      padding:96px 0 80px;
+      background:
+        radial-gradient(1100px 420px at 80% -10%, var(--bg-2), transparent 70%);
+    }
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+    .hero h1{font-size:clamp(2.1rem,5vw,3.5rem);margin-bottom:20px}
+    .hero h1 .acc{color:var(--accent)}
+    .hero p{font-size:1.13rem;color:var(--ink-soft);max-width:52ch;margin-bottom:32px}
+    .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+    .hero-art{
+      aspect-ratio:4/3;border-radius:var(--radius);border:1px solid var(--line);
+      background:
+        linear-gradient(135deg,#234356 0%,#1f3a4d 55%,#16303f 100%);
+      position:relative;overflow:hidden;box-shadow:0 24px 60px -28px rgba(31,58,77,.45);
+    }
+    .hero-art::before{
+      content:"";position:absolute;inset:0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);
+      background-size:40px 40px;
+    }
+    .hero-art .badge{
+      position:absolute;left:24px;bottom:24px;right:24px;
+      background:rgba(255,255,255,.96);border-radius:11px;padding:18px 20px;
+      display:flex;align-items:center;gap:14px;
+    }
+    .hero-art .badge .dot{width:10px;height:10px;border-radius:50%;background:#3a9d5d;flex:none;box-shadow:0 0 0 4px rgba(58,157,93,.18)}
+    .hero-art .badge strong{display:block;font-size:.98rem;color:var(--ink)}
+    .hero-art .badge span{font-size:.85rem;color:var(--ink-soft)}
+
+    /* Trust strip */
+    .strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--card)}
+    .strip .wrap{display:flex;flex-wrap:wrap;gap:14px 40px;justify-content:space-between;padding-top:22px;padding-bottom:22px}
+    .strip .item{display:flex;align-items:center;gap:10px;font-weight:600;color:var(--ink-soft);font-size:.95rem}
+    .strip .item svg{color:var(--accent);flex:none}
+
+    /* Services */
+    .grid-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+    .card{
+      background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+      padding:30px 28px;transition:.2s;
+    }
+    .card:hover{transform:translateY(-3px);box-shadow:0 18px 40px -26px rgba(29,33,30,.3);border-color:#d3cabb}
+    .card .ico{
+      width:48px;height:48px;border-radius:11px;background:var(--bg-2);
+      display:grid;place-items:center;color:var(--accent);margin-bottom:18px;
+    }
+    .card h3{font-size:1.18rem;margin-bottom:8px}
+    .card p{color:var(--ink-soft);font-size:.97rem}
+
+    /* About */
+    .about{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+    .points{display:grid;gap:18px;margin-top:8px}
+    .point{display:flex;gap:16px}
+    .point .n{
+      width:42px;height:42px;border-radius:50%;flex:none;background:var(--accent);color:#fff;
+      display:grid;place-items:center;font-weight:800;
+    }
+    .point h3{font-size:1.08rem;margin-bottom:3px}
+    .point p{color:var(--ink-soft);font-size:.96rem}
+
+    /* Contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:44px}
+    .info-list{display:grid;gap:6px}
+    .info-row{display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--line)}
+    .info-row:last-child{border-bottom:0}
+    .info-row .ico{color:var(--accent);flex:none;margin-top:2px}
+    .info-row .lbl{font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft);font-weight:700}
+    .info-row .val{font-weight:700;font-size:1.05rem}
+    .info-row .val a:hover{color:var(--accent)}
+    .contact-card{
+      background:var(--accent);color:#fff;border-radius:var(--radius);padding:38px 34px;
+    }
+    .contact-card h3{color:#fff;font-size:1.5rem;margin-bottom:12px}
+    .contact-card p{color:rgba(255,255,255,.82);margin-bottom:26px}
+    .contact-card .btn-primary{background:#fff;color:var(--accent);width:100%;justify-content:center}
+    .contact-card .btn-primary:hover{background:#eef3f6}
+    .contact-card .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.35);width:100%;justify-content:center;margin-top:12px}
+    .contact-card .btn-ghost:hover{border-color:#fff;color:#fff}
+
+    /* Footer */
+    footer{background:var(--ink);color:#cfd3d0;padding:54px 0 30px}
+    .foot-grid{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;align-items:flex-start}
+    footer .brand{color:#fff}
+    footer .brand .mark{background:var(--accent-2)}
+    .foot-links{display:flex;gap:26px;flex-wrap:wrap}
+    .foot-links a{color:#cfd3d0;font-weight:600;font-size:.95rem}
+    .foot-links a:hover{color:#fff}
+    .foot-bottom{margin-top:34px;padding-top:22px;border-top:1px solid #34403a;font-size:.85rem;color:#9aa39d;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+    /* Legal */
+    .legal{background:var(--bg-2)}
+    .legal h2{margin-bottom:24px}
+    .legal h3{font-size:1.1rem;margin:26px 0 8px}
+    .legal p{color:var(--ink-soft);max-width:75ch;margin-bottom:10px}
+    .legal .ph{color:#a08a5a;font-weight:600}
+    .legal-block + .legal-block{margin-top:64px;padding-top:64px;border-top:1px solid var(--line)}
+
+    /* Responsive */
+    @media(max-width:900px){
+      .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:36px}
+      .hero-art{order:-1}
+      .grid-cards{grid-template-columns:repeat(2,1fr)}
+      section{padding:64px 0}
+      .nav-links{
+        position:fixed;inset:72px 0 auto 0;background:var(--bg);
+        flex-direction:column;align-items:stretch;gap:0;
+        padding:8px 24px 24px;border-bottom:1px solid var(--line);
+        transform:translateY(-130%);transition:transform .28s ease;box-shadow:0 20px 40px -24px rgba(0,0,0,.25);
+      }
+      .nav-links.open{transform:translateY(0)}
+      .nav-links a{padding:15px 0;border-bottom:1px solid var(--line);font-size:1.05rem}
+      .nav-links .btn{margin-top:16px;justify-content:center}
+      .hamburger{display:flex}
+    }
+    @media(max-width:560px){
+      .grid-cards{grid-template-columns:1fr}
+      .strip .wrap{gap:14px 22px}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrap nav">
+      <a href="#top" class="brand"><span class="mark">G</span> Gieleßen Handwerk &amp; Service</a>
+      <nav class="nav-links" id="menu">
+        <a href="#leistungen">Leistungen</a>
+        <a href="#ueber">Über uns</a>
+        <a href="#kontakt">Kontakt</a>
+        <a class="btn btn-primary" href="tel:+4921614737664">02161 4737664</a>
+      </nav>
+      <button class="hamburger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">Haustechnik &amp; Service · Mönchengladbach</span>
+          <h1>Ihr Handwerksbetrieb für <span class="acc">Sanitär, Heizung &amp; Haustechnik</span> in Mönchengladbach</h1>
+          <p>Von der Sanitär-Installation über Heizung und Renovierung bis zur schnellen Rohrbruch-Sanierung – Gieleßen Handwerk &amp; Service kümmert sich zuverlässig und sauber um Ihr Zuhause.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="tel:+4921614737664">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Jetzt anrufen
+            </a>
+            <a class="btn btn-ghost" href="#kontakt">Angebot anfragen</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="badge">
+            <span class="dot"></span>
+            <div>
+              <strong>Mo–Fr 8:00–17:30 Uhr erreichbar</strong>
+              <span>Schnelle Termine in Mönchengladbach &amp; Umgebung</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <div class="strip">
+      <div class="wrap">
+        <div class="item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Sanitär &amp; Heizung aus einer Hand</div>
+        <div class="item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg> Verkauf von Sanitär- &amp; Heizungsprodukten</div>
+        <div class="item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Rohrbruch- &amp; Trocknungsservice</div>
+        <div class="item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Regional in Mönchengladbach</div>
+      </div>
+    </div>
+
+    <!-- LEISTUNGEN -->
+    <section id="leistungen">
+      <div class="wrap">
+        <span class="eyebrow">Leistungen</span>
+        <h2>Was wir für Sie übernehmen</h2>
+        <p class="lead">Ein zuverlässiger Ansprechpartner für Haustechnik, Reparatur und Renovierung – sauber ausgeführt und fair beraten.</p>
+        <div class="grid-cards">
+          <article class="card">
+            <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><path d="M9 9v.01M9 12v.01M9 15v.01"/></svg></div>
+            <h3>Haustechnik</h3>
+            <p>Sanitär- und Heizungstechnik fürs ganze Haus – Installation, Reparatur und Modernisierung aus einer Hand.</p>
+          </article>
+          <article class="card">
+            <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v6l4 2"/><circle cx="12" cy="12" r="9"/></svg></div>
+            <h3>Sanitär &amp; Heizung</h3>
+            <p>Bäder, Heizungsanlagen und Anschlüsse – fachgerecht geplant, montiert und gewartet.</p>
+          </article>
+          <article class="card">
+            <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m14.7 6.3 3 3M2 22l4-1 11-11-3-3L3 18l-1 4z"/><path d="M16 2l6 6"/></svg></div>
+            <h3>Renovierung</h3>
+            <p>Renovierungsarbeiten und Modernisierung – wir bringen Räume sauber und solide auf den neuesten Stand.</p>
+          </article>
+          <article class="card">
+            <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 1 0-5.66 5.66l-7.04 7.04 2 2 7.04-7.04a4 4 0 0 0 3.66-7.66z"/></svg></div>
+            <h3>Montageservice</h3>
+            <p>Fachgerechter Auf- und Einbau Ihrer Sanitär- und Heizungsprodukte – pünktlich und zuverlässig.</p>
+          </article>
+          <article class="card">
+            <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69 5.6 8.4a8 8 0 1 0 12.8 0L12 2.69z"/></svg></div>
+            <h3>Rohrbruch-Sanierung</h3>
+            <p>Wasserschaden? Wir orten und beheben Rohrbrüche und sorgen für die fachgerechte Sanierung.</p>
+          </article>
+          <article class="card">
+            <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h2m16 0h2M12 2v2m0 16v2M5 5l1.5 1.5M17.5 17.5 19 19M19 5l-1.5 1.5M6.5 17.5 5 19"/><circle cx="12" cy="12" r="4"/></svg></div>
+            <h3>Trocknungsservice &amp; Geräte-Vermietung</h3>
+            <p>Professionelle Trocknung nach Wasserschäden sowie Vermietung von Heizgeräten und Bautrocknern.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- UEBER UNS -->
+    <section id="ueber" class="about">
+      <div class="wrap about-grid">
+        <div>
+          <span class="eyebrow">Über uns</span>
+          <h2>Handwerk, auf das Sie sich verlassen können</h2>
+          <p class="lead">Gieleßen Handwerk &amp; Service ist Ihr regionaler Partner für Haustechnik und Reparatur in Mönchengladbach – mit kurzen Wegen, klarer Beratung und sauberer Ausführung.</p>
+        </div>
+        <div class="points">
+          <div class="point">
+            <span class="n">1</span>
+            <div><h3>Alles aus einer Hand</h3><p>Haustechnik, Montage, Renovierung und Sanierung – ein Ansprechpartner für Ihr gesamtes Projekt.</p></div>
+          </div>
+          <div class="point">
+            <span class="n">2</span>
+            <div><h3>Schnell erreichbar</h3><p>Mo–Fr von 8:00 bis 17:30 Uhr – kurze Reaktionszeiten, besonders bei Rohrbruch und Wasserschaden.</p></div>
+          </div>
+          <div class="point">
+            <span class="n">3</span>
+            <div><h3>Regional verwurzelt</h3><p>Zuhause in Mönchengladbach und Umgebung – wir kennen die Region und sind schnell vor Ort.</p></div>
+          </div>
+          <div class="point">
+            <span class="n">4</span>
+            <div><h3>Faire Beratung</h3><p>Ehrliche Einschätzung, transparente Angebote und Produkte direkt aus dem eigenen Verkauf.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section id="kontakt">
+      <div class="wrap">
+        <span class="eyebrow">Kontakt</span>
+        <h2>Sprechen Sie uns an</h2>
+        <p class="lead">Ob Beratung, Angebot oder akuter Notfall – rufen Sie an oder schreiben Sie uns. Wir melden uns zeitnah zurück.</p>
+        <div class="contact-grid">
+          <div class="info-list">
+            <div class="info-row">
+              <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+              <div><div class="lbl">Telefon</div><div class="val"><a href="tel:+4921614737664">02161 4737664</a></div></div>
+            </div>
+            <div class="info-row">
+              <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+              <div><div class="lbl">E-Mail</div><div class="val"><a href="mailto:info@gielessen.de">info@gielessen.de</a></div></div>
+            </div>
+            <div class="info-row">
+              <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <div><div class="lbl">Adresse</div><div class="val">Genhodderheide 32<br>41179 Mönchengladbach</div></div>
+            </div>
+            <div class="info-row">
+              <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+              <div><div class="lbl">Öffnungszeiten</div><div class="val">Mo–Fr 8:00–17:30 Uhr</div></div>
+            </div>
+          </div>
+          <div class="contact-card">
+            <h3>Schnell zu Ihrem Termin</h3>
+            <p>Rufen Sie direkt an oder fordern Sie ein unverbindliches Angebot per E-Mail an – wir kümmern uns um den Rest.</p>
+            <a class="btn btn-primary" href="tel:+4921614737664">02161 4737664 anrufen</a>
+            <a class="btn btn-ghost" href="mailto:info@gielessen.de?subject=Angebotsanfrage">Angebot per E-Mail anfragen</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <div class="brand"><span class="mark">G</span> Gieleßen Handwerk &amp; Service</div>
+          <p style="margin-top:14px;max-width:34ch;color:#9aa39d;font-size:.95rem">Haustechnik, Sanitär &amp; Heizung, Renovierung und Service in Mönchengladbach.</p>
+        </div>
+        <div class="foot-links">
+          <a href="#leistungen">Leistungen</a>
+          <a href="#ueber">Über uns</a>
+          <a href="#kontakt">Kontakt</a>
+          <a href="#impressum">Impressum</a>
+          <a href="#datenschutz">Datenschutz</a>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>© 2026 Gieleßen Handwerk &amp; Service · Genhodderheide 32, 41179 Mönchengladbach</span>
+        <span>Mo–Fr 8:00–17:30 Uhr · 02161 4737664</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- IMPRESSUM & DATENSCHUTZ -->
+  <section class="legal">
+    <div class="wrap">
+
+      <div class="legal-block" id="impressum">
+        <h2>Impressum</h2>
+        <h3>Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz)</h3>
+        <p>
+          Gieleßen Handwerk &amp; Service<br>
+          Genhodderheide 32<br>
+          41179 Mönchengladbach
+        </p>
+        <h3>Vertreten durch</h3>
+        <p>Geschäftsführer: <span class="ph">[bitte ergänzen]</span></p>
+        <h3>Kontakt</h3>
+        <p>
+          Telefon: 02161 4737664<br>
+          E-Mail: info@gielessen.de
+        </p>
+        <h3>Umsatzsteuer-Identifikationsnummer</h3>
+        <p>USt-IdNr. gemäß § 27 a Umsatzsteuergesetz: <span class="ph">[bitte ergänzen]</span></p>
+        <h3>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h3>
+        <p><span class="ph">[bitte ergänzen]</span>, Anschrift wie oben.</p>
+      </div>
+
+      <div class="legal-block" id="datenschutz">
+        <h2>Datenschutzerklärung</h2>
+        <h3>1. Verantwortlicher</h3>
+        <p>
+          Verantwortlich für die Datenverarbeitung auf dieser Website ist:<br>
+          Gieleßen Handwerk &amp; Service, Genhodderheide 32, 41179 Mönchengladbach,
+          Telefon 02161 4737664, E-Mail info@gielessen.de.
+        </p>
+        <h3>2. Erhebung und Verarbeitung personenbezogener Daten</h3>
+        <p>Beim Besuch dieser Website werden durch den Hostingdienst automatisch technische Zugriffsdaten (z. B. IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seite, Browsertyp) in Server-Logfiles erfasst. Diese Verarbeitung erfolgt zur Sicherstellung eines störungsfreien Betriebs und der Sicherheit der Website auf Grundlage unseres berechtigten Interesses (Art. 6 Abs. 1 lit. f DSGVO).</p>
+        <h3>3. Kontaktaufnahme</h3>
+        <p>Wenn Sie uns per Telefon oder E-Mail kontaktieren, verarbeiten wir die von Ihnen übermittelten Daten ausschließlich zur Bearbeitung Ihrer Anfrage (Art. 6 Abs. 1 lit. b und lit. f DSGVO). Diese Daten geben wir nicht ohne Ihre Einwilligung weiter und löschen sie, sobald sie für den Zweck nicht mehr erforderlich sind.</p>
+        <h3>4. Ihre Rechte</h3>
+        <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit sowie Widerspruch gegen die Verarbeitung Ihrer personenbezogenen Daten. Zudem steht Ihnen ein Beschwerderecht bei einer Datenschutz-Aufsichtsbehörde zu.</p>
+        <h3>5. Hinweis</h3>
+        <p><span class="ph">Dies ist eine Grundlagen-Vorlage und ersetzt keine individuelle Rechtsberatung. Bitte vor Veröffentlichung rechtlich prüfen und ergänzen (z. B. eingesetzte Tools, Cookies, Hosting-Anbieter).</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    (function(){
+      var burger = document.getElementById('burger');
+      var menu = document.getElementById('menu');
+      function close(){ menu.classList.remove('open'); burger.classList.remove('open'); burger.setAttribute('aria-expanded','false'); }
+      burger.addEventListener('click', function(){
+        var open = menu.classList.toggle('open');
+        burger.classList.toggle('open', open);
+        burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', close); });
+      window.addEventListener('resize', function(){ if(window.innerWidth > 900) close(); });
+    })();
+  </script>
+</body>
+</html>
